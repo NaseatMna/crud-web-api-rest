@@ -1,30 +1,30 @@
 {
   "groups": [{
-    "name": "demo.security.jwt",
+    "name": "jwt",
     "type": "com.shodaqa.security.config.JwtSettings",
     "sourceType": "com.shodaqa.security.config.JwtSettings"
   }],
   "properties": [
     {
-      "name": "demo.security.jwt.refresh-token-exp-time",
+      "name": "jwt.refresh-token-exp-time",
       "type": "java.lang.Integer",
       "description": "{@link JwtToken} can be refreshed during this timeframe.",
       "sourceType": "com.shodaqa.security.config.JwtSettings"
     },
     {
-      "name": "demo.security.jwt.token-expiration-time",
+      "name": "jwt.token-expiration-time",
       "type": "java.lang.Integer",
       "description": "{@link JwtToken} will expire after this time.",
       "sourceType": "com.shodaqa.security.config.JwtSettings"
     },
     {
-      "name": "demo.security.jwt.token-issuer",
+      "name": "jwt.token-issuer",
       "type": "java.lang.String",
       "description": "Token issuer.",
       "sourceType": "com.shodaqa.security.config.JwtSettings"
     },
     {
-      "name": "demo.security.jwt.token-signing-key",
+      "name": "jwt.token-signing-key",
       "type": "java.lang.String",
       "description": "Key is used to sign {@link JwtToken}.",
       "sourceType": "com.shodaqa.security.config.JwtSettings"

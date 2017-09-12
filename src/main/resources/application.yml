@@ -1,7 +1,17 @@
-server.port: 9966
-spring.profiles: default
-demo.security.jwt:
+server:
+  contextPath:
+
+# JACKSON
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+jwt:
+  version: v1
+  header: X-Authorization
   tokenExpirationTime: 15 # Number of minutes
   refreshTokenExpTime: 60 # Minutes
-  tokenIssuer: http://svlada.com
-  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+  tokenIssuer: dev
+  tokenSigningKey:  xm8EV6Hy5RMFK4EEACIDAwQus
+
