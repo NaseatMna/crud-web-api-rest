@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.InvocationTargetException;
 
 import static com.shodaqa.common.CoreConstants.DEFAULT_CONTENT_TYPE;
+import static com.shodaqa.helpers.response.ResponseHelpers.responseData;
 import static com.shodaqa.helpers.response.ResponseHelpers.responseSuccess;
 
 /**
@@ -36,7 +37,9 @@ public class TestController extends BaseController{
 		NullAndEnumUtils.getInstance().copyProperties(test,testForm);
 		testService.save(test);
 		return responseSuccess(request,response);
-
-
+	}
+	@RequestMapping(method = RequestMethod.GET)
+	public String getTest(HttpServletRequest request, HttpServletResponse response)throws JsonProcessingException, InvocationTargetException, IllegalAccessException {
+		return responseData(testService.list(),request,response);
 	}
 }
